@@ -1,0 +1,147 @@
+/* NavBar Styles */
+#navbar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#navbar #logo {
+    font-size: 2.5rem;
+}
+
+#navbar nav {
+    display: flex;
+    gap: 2rem;
+}
+
+#navbar nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#navbar nav a:hover {
+    color: #FFC107;
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navbar nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar #logo {
+        text-align: center;
+    }
+}
+
+/* Responsive Design for Hamburger Menu */
+@media (max-width: 768px) {
+    #navbar nav .menu-items {
+      display: none;
+    }
+  
+    #navbar nav.open .menu-items {
+      display: block;
+      background-color: #333;
+      position: absolute;
+      top: 80px; /* Adjust this value to control the distance from the top */
+      right: 0;
+      left: 0;
+      z-index: 1;
+    }
+  
+    #navbar nav .menu-items a {
+        display: block;
+        padding: 1rem 2rem; /* Adjust the padding as needed */
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        transition: background-color 0.3s ease; /* Add transition for background color */
+      }
+    
+      /* Add hover effect to the entire menu item box */
+      #navbar nav .menu-items a:hover {
+        background-color: #444; /* Adjust the background color for the hover effect */
+      }
+
+      /* Styles for hamburger menu items */
+  #navbar nav .hamburger-menu .menu-items a {
+    display: block;
+    padding: 1rem 2rem; /* Adjust the padding as needed */
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease; /* Add transition for background color */
+  }
+
+  /* Add hover effect to the entire menu item box */
+  #navbar nav .hamburger-menu .menu-items a:hover {
+    background-color: #444; /* Adjust the background color for the hover effect */
+  }
+  
+    #navbar nav .menu-button {
+      display: block;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+  
+  /* For larger screens, display menu items horizontally */
+  @media (min-width: 769px) {
+    #navbar nav .menu-items {
+      display: flex;
+      align-items: center;
+    }
+  
+    #navbar nav .menu-items a {
+      margin-right: 2rem; /* Adjust the margin as needed */
+    }
+  
+    #navbar nav .menu-button {
+      display: none; /* Hide the hamburger button */
+    }
+}
+
+
+
+
+/* Apply styles to router-links globally */
+a.router-link-active, a.router-link-exact-active {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+a.router-link-active:hover, a.router-link-exact-active:hover {
+    color: #FFC107;
+    text-decoration: underline;
+}
+
+/* Other styles */
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
